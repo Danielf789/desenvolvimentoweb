@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js04_Salario1.htm</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta charset="utf-8"/>
+</head>
+    <body>
+        <script language="JavaScript">
+            var horas_trab;
+            var valor_hora;
+            var perct_desc;
+            var desc_total;
+            var salario_bruto;
+            var salario_liquido;
+
+            horas_trab = parseFloat(window.prompt('Informe a quantidade de horas trabalhadas/m\u00eas (135 a 179):','00'));
+            valor_hora = parseFloat(window.prompt('Informe o valor da horas trabalhada:(25 a 50','00'));
+            perct_desc = parseFloat(window.prompt('Informe o percentual de desconto INSS:(5 a 15)','00'));
+
+            salario_bruto = valor_hora * horas_trab;
+            desc_total    = (perct_desc/100) * salario_bruto;
+            salario_liquido = salario_bruto - desc_total;
+
+            document.write('<p><b>Calculo do salario liquido</b>');
+
+            document.write('<p>Quantidade de horas trabalhadas (135 a 179) = <b>' + horas_trab + '</b>');
+            if (horas_trab > 179){
+                document.write('...(<b>Valor maximo excedido!</b>)');
+            }
+            if (horas_trab < 135){
+                document.write('...(<b>Valor minimo invalido!</b>)');
+            }
+            document.write('<p>Valor da hora trabalhada (25 a 50) = <b>' + valor_hora + '</b>');
+            if (valor_hora > 50){
+                document.write('...(<b>Valor maximo excedido!</b>)');
+            }
+            if (valor_hora < 25){
+                document.write('...(<b>Valor minimo invalido!</b>)');
+            } document.write('<p>Percentual de desconto INSS:(5 a 15) = <b>' + perct_desc + '</b>');
+            if (perct_desc > 15){
+                document.write('...(<b>Valor maximo excedido!</b>)');
+            }
+            if (perct_desc < 5){
+                document.write('...(<b>Valor minimo invalido!</b>)');
+            }
+
+            document.write('<P>/////////////////////////////////////////////////////////////////');
+            document.write('<p><b>Salario Bruto = </b>' + salario_bruto);
+            document.write('<p>Total de descontos INSS = ' + desc_total);
+            document.write('<p><b>Salario Liquido = </b>' + salario_liquido);
+
+            if (salario_liquido > 10500){
+                document.write('...(<b>Salario Elevado! </b>maior que 10.500)');
+            }
+            else{
+                if (salario_liquido > 6000){
+                    document.write('...(<b>Salario Satisfatorio! </b>maior que 6.000)');
+                }
+                else{
+                    if (salario_liquido > 3000){
+                        document.write('...(<b>Salario Moderado! </b>maior que 3.000)');
+                    }
+                    else{
+                        document.write('...(<b>Salario Insatisfatorio! </b>menor ou igual a 3.000)');
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
