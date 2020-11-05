@@ -1,0 +1,32 @@
+p{
+    color: blue;
+    background-color: red;
+}
+
+body{
+    background-color: royalblue;
+    background-image: url(cat.jpg);
+    background-attachment: fixed;
+}
+/*background-repeat: repeat-x A imagem se repete no eixo
+
+horizontal.
+
+background-repeat: repeat-y A imagem se repete no eixo
+
+vertical.
+
+background-repeat: repeat A imagem irá se repetir tanto na
+horizontal como na vertical.
+background-repeat: no-repeat A imagem não vai se repetir.
+Exemplo:
+
+OBS: também existe uma propriedade que permite que a imagem role
+conforme o usuário mexe, ou se será fixa na página:
+
+Valor O que faz
+
+background-attachment: scroll Imagem vai junto com a página.
+
+
+background-attachment: fixed Imagem fica fixa. */

@@ -1,0 +1,12 @@
+#paragrafo{
+    color: royalblue;
+}
+#span{
+    font-size:  100px;
+    font-weight: bold;
+    color: salmon;
+}
+#span2{
+    font-variant: small-caps;
+    color: seagreen;
+}
